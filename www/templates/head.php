@@ -8,4 +8,7 @@
 </head>
 
 <body>
-    <?php include("navbar.php") ?>
+    <div class="header">
+        <img src="../images/braveheart_logo.png">
+        <?php include("navbar.php") ?>
+    </div>

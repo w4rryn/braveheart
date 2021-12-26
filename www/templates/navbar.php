@@ -1,10 +1,18 @@
-<div class="navbar-collapse collapse">
+<?php
+$sites["Home"] = "index.php";
+$sites["Blog"] = "blog.php";
+$sites["Teilnehmer Anmelden"] = "anmelden.php";
+$sites["Auswerten"] = "auswerten.php";
+?>
+
+<div class="nav-container">
     <ul class="nav">
-        <li>
-            <a href="index.php">Home</a>
-        </li>
-        <li>
-            <a href="blog.php">Blog</a>
-        </li>
+        <?php
+        global $current_page;
+        foreach ($sites as $key => $path) {
+            $str = "<li><a class=\"fade\" href=\"$path\">$key</a></li>";
+            echo $str;
+        }
+        ?>
     </ul>
 </div>
