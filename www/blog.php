@@ -28,8 +28,7 @@ if (array_key_exists("btn", $_POST)) {
     </div>
     <div class="blog-form">
         <form method="post">
-            <label for="txt">Blogeintrag:</label>
-            <input type="text" name="txt" id="txt">
+            <textarea name="txt" id="" cols="30" rows="10">Eintrag...</textarea>
             <input type="submit" value="Absenden" name="btn">
         </form>
     </div>
