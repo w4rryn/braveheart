@@ -71,3 +71,4 @@
 2021-12-27T21:43:35.539424Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
 2021-12-27T21:43:35.579935Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
 2021-12-27T21:43:35.580848Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-27T21:43:35.641297Z 0 [System] [MY-010931] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.0.23'  socket: ''  port: 3306  MySQL Community Server - GPL.
