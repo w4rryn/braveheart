@@ -38,6 +38,7 @@ h1 {
 
 .nav li {
   display: inline;
+  height: 100%;
 }
 
 .fade {
@@ -50,14 +51,10 @@ h1 {
 
 .nav li a {
   font-size: 20pt;
-  padding: 50% 20px;
   text-decoration: none;
+  padding: 9% 20px;
 }
 
 .nav li a:hover {
-  background-color: #9e9e9e;
-}
-
-.nav-active {
   background-color: #9e9e9e;
 }
