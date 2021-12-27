@@ -5,12 +5,11 @@ $sites["Teilnehmer Anmelden"] = "anmelden.php";
 $sites["Auswerten"] = "auswerten.php";
 ?>
 
-<div class="nav-container">
+<div class="flex-container">
     <ul class="nav">
         <?php
-        global $current_page;
         foreach ($sites as $key => $path) {
-            $str = "<li><a class=\"fade\" href=\"$path\">$key</a></li>";
+            $str = "<li class=\"fade\"><a href=\"$path\">$key</a></li>";
             echo $str;
         }
         ?>
