@@ -334,3 +334,9 @@
 [Mon Dec 27 19:47:30.723504 2021] [php:error] [pid 3360:tid 1832] [client ::1:61690] script 'C:/Users/uuhg3/Desktop/sae_projekt/www/anmelden.php' not found or unable to stat, referer: http://localhost/index.php
 [Mon Dec 27 19:49:41.433268 2021] [php:error] [pid 3360:tid 1832] [client ::1:61709] script 'C:/Users/uuhg3/Desktop/sae_projekt/www/auswerten.php' not found or unable to stat, referer: http://localhost/index.php
 [Mon Dec 27 19:52:41.008927 2021] [php:error] [pid 3360:tid 1832] [client ::1:61744] script 'C:/Users/uuhg3/Desktop/sae_projekt/www/auswerten.php' not found or unable to stat, referer: http://localhost/index.php
+[Mon Dec 27 22:43:34.478835 2021] [core:warn] [pid 7988:tid 604] AH00098: pid file C:/Users/uuhg3/Desktop/sae_projekt/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Dec 27 22:43:34.626566 2021] [mpm_winnt:notice] [pid 7988:tid 604] AH00455: Apache/2.4.46 (Win32) PHP/8.0.3 configured -- resuming normal operations
+[Mon Dec 27 22:43:34.626566 2021] [mpm_winnt:notice] [pid 7988:tid 604] AH00456: Apache Lounge VC15 Server built: Feb 18 2021 09:53:33
+[Mon Dec 27 22:43:34.626566 2021] [core:notice] [pid 7988:tid 604] AH00094: Command line: 'C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2\\bin\\httpd_z.exe -d C:/Users/uuhg3/Desktop/sae_projekt/core/apache2 -f C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2\\conf\\httpd.conf -d C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2'
+[Mon Dec 27 22:43:34.629249 2021] [mpm_winnt:notice] [pid 7988:tid 604] AH00418: Parent: Created child process 13516
+[Mon Dec 27 22:43:35.460418 2021] [mpm_winnt:notice] [pid 13516:tid 680] AH00354: Child: Starting 150 worker threads.

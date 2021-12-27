@@ -1,17 +1,11 @@
 <?php
-$sites["Home"] = "index.php";
-$sites["Blog"] = "blog.php";
-$sites["Teilnehmer Anmelden"] = "anmelden.php";
-$sites["Auswerten"] = "auswerten.php";
-?>
+// //check if the get variable exists
+// if (isset($_GET['search'])) {
+//     search($_GET['search']);
+// }
 
-<div class="flex-container ">
-    <ul class="nav">
-        <?php
-        foreach ($sites as $key => $path) {
-            $str = "<li class=\"fade\"><a href=\"$path\">$key</a></li>";
-            echo $str;
-        }
-        ?>
-    </ul>
-</div>
+// function Search($res)
+// {
+//     //real search code goes here
+//     echo $res;
+// }

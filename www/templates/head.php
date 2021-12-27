@@ -8,7 +8,16 @@
 </head>
 
 <body>
-    <div class="header flex-container box-shadow">
-        <img src="../images/braveheart_logo.png">
-        <?php include("navbar.php") ?>
+    <div class="header box-shadow">
+        <div class="flex-container nav-container">
+            <a href="index.php" class="nav-logo">
+                <img src="../images/braveheart_logo.png">
+            </a>
+            <div class="nav-menu">
+                <a class="nav-item fade" href="index.php">Home</a>
+                <a class="nav-item fade" href="blog.php">Blog</a>
+                <a class="nav-item fade" href="anmelden.php">Anlegen</a>
+                <a class="nav-item fade" href="#">Auswerten</a>
+            </div>
+        </div>
     </div>
