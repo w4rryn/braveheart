@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header flex-container">
         <img src="../images/braveheart_logo.png">
         <?php include("navbar.php") ?>
     </div>
