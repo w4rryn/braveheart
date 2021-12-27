@@ -5,7 +5,7 @@ $sites["Teilnehmer Anmelden"] = "anmelden.php";
 $sites["Auswerten"] = "auswerten.php";
 ?>
 
-<div class="flex-container">
+<div class="flex-container ">
     <ul class="nav">
         <?php
         foreach ($sites as $key => $path) {

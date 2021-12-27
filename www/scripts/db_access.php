@@ -14,7 +14,7 @@ function add_blog_entry($str)
 function get_blog_entries()
 {
     $conn = create_conn();
-    $sql = "SELECT * FROM blog_entries;";
+    $sql = "SELECT * FROM blog_entries ORDER BY created_at DESC;";
     $res = mysqli_query($conn, $sql);
     if ($res == null) {
         show_error(mysqli_error($conn));

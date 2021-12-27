@@ -7,26 +7,26 @@ if (array_key_exists("btn", $_POST)) {
 }
 ?>
 
-<div>
-    <div>
+<div class="content flex-container site-content">
+    <div class="blog">
         <table>
             <tr>
-                <th>Eintrag</th>
-                <th>Datum</th>
+                <th class="blogpost">Eintrag</th>
+                <th class="blogdate">Datum</th>
             </tr>
             <?php
-            // $entries = get_blog_entries();
-            // foreach ($entries as $key => $value) {
-            //     echo "
-            //     <tr>
-            //     <td>" . $value["content"] . "</td>
-            //     <td>" . $value["created_at"] . "</td>
-            //     </tr>";
-            // }
+            $entries = get_blog_entries();
+            foreach ($entries as $key => $value) {
+                $d = strtotime($value["created_at"]);
+                echo "<tr>";
+                echo "<td>" . $value["content"] . "</td>";
+                echo "<td>" . date("d.m.Y H:i", $d) . "</td>";
+                echo "</tr>";
+            }
             ?>
         </table>
     </div>
-    <div>
+    <div class="blog-form">
         <form method="post">
             <label for="txt">Blogeintrag:</label>
             <input type="text" name="txt" id="txt">
