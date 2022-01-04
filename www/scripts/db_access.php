@@ -31,3 +31,13 @@ function create_conn()
     }
     return $conn;
 }
+
+function save_new_contestant($name, $surname, $age_range, $gender, $course)
+{
+    $sql = "INSERT INTO contestants(name, surname, age_range, gender, course) VALUES('$name', '$surname', '$age_range', '$gender', '$course');";
+    $conn = create_conn();
+    mysqli_query($conn, $sql);
+    if (mysqli_errno($conn) != 0) {
+        show_error(mysqli_errno($conn));
+    }
+}
