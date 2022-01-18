@@ -98,3 +98,11 @@ td {
 .blog-form {
   width: auto;
 }
+
+.input-err {
+  color: red;
+}
+
+.paragraph {
+  margin-top: 20px;
+}

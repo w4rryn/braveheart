@@ -16,7 +16,7 @@
             <div class="nav-menu">
                 <a class="nav-item fade" href="index.php">Home</a>
                 <a class="nav-item fade" href="blog.php">Blog</a>
-                <a class="nav-item fade" href="anmelden.php">Anlegen</a>
+                <a class="nav-item fade" href="anmelden.php">Anmelden</a>
                 <a class="nav-item fade" href="#">Auswerten</a>
             </div>
         </div>
