@@ -17,7 +17,7 @@
                 <a class="nav-item fade" href="index.php">Home</a>
                 <a class="nav-item fade" href="blog.php">Blog</a>
                 <a class="nav-item fade" href="anmelden.php">Anmelden</a>
-                <a class="nav-item fade" href="#">Auswerten</a>
+                <a class="nav-item fade" href="auswerten.php">Auswerten</a>
             </div>
         </div>
     </div>

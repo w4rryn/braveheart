@@ -41,3 +41,16 @@ function save_new_contestant($name, $surname, $age_range, $gender, $course)
         show_error(mysqli_errno($conn));
     }
 }
+
+function get_contestants($filter)
+{
+    echo $filter;
+    $sql = "SELECT * FROM contestants";
+    if ($filter != null) {
+        $sql = "$sql WHERE $filter";
+    }
+    $sql = "$sql;";
+    $conn = create_conn();
+    $res = mysqli_query($conn, $sql);
+    return $res;
+}
