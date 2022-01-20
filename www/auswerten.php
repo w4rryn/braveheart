@@ -6,7 +6,7 @@ require_once "scripts/db_access.php";
 
 <?php
 $filter = null;
-if (!empty($_POST["btn"])) {
+if (!empty($_POST["filter"])) {
     $course = "";
     $age = "";
     $gender = "";
@@ -66,7 +66,8 @@ function create_table($filter)
             <td>$age</td>
             <td>$gender</td>
             <td>$course km</td>
-            <td></td>
+            <td><input type=\"number\"></td>
+            <td><input type=\"number\"></td>
         </tr>
         ";
     }
@@ -95,8 +96,9 @@ function create_table($filter)
             <option value="m">m</option>
             <option value="f">f</option>
         </select>
-        <input type="submit" value="Anwenden" name="btn">
+        <input type="submit" value="Anwenden" name="filter">
     </form>
+
     <table>
         <tr>
             <th>Startnummer</th>
@@ -105,11 +107,15 @@ function create_table($filter)
             <th>Altersgruppe</th>
             <th>Geschlecht</th>
             <th>Strecke</th>
-            <th>Zeit</th>
+            <th>Minuten</th>
+            <th>Sekunden</th>
         </tr>
-        <?php
-        echo create_table($filter);
-        ?>
+        <thead></thead>
+        <tbody>
+            <?php
+            echo create_table($filter);
+            ?>
+        </tbody>
     </table>
 </div>
 

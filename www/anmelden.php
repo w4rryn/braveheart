@@ -43,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $success = "Anmeldung von $name $surname erfolgreich";
     }
 }
-?>
 
+?>
 <div class="content site-content">
     <form method="post">
         <div>
