@@ -5,52 +5,12 @@ require_once "scripts/db_access.php";
 ?>
 
 <?php
-$filter = null;
-if (!empty($_POST["filter"])) {
-    $course = "";
-    $age = "";
-    $gender = "";
-    if (!empty($_POST["course"])) {
-        $course = $_POST["course"];
-    }
-    if (!empty($_POST["age"])) {
-        $age = $_POST["age"];
-    }
-    if (!empty($_POST["gender"])) {
-        $gender = $_POST["gender"];
-    }
-    if ($course != "empty") {
-        if ($filter == null) {
-            $filter = "course='$course'";
-        } else {
-            $filter = "$filter AND course='$course'";
-        }
-    }
-    if ($age != "empty") {
-        if ($filter == null) {
-            $filter = "age_range='$age'";
-        } else {
-            $filter = "$filter AND age_range='$age'";
-        }
-    }
-    if ($gender != "empty") {
-        if ($filter == null) {
-            $filter = "gender='$gender'";
-        } else {
-            $filter = "$filter AND gender='$gender'";
-        }
-    }
-    if ($course == "empty" && $age == "empty" && $gender == "empty") {
-        $filter = null;
-    }
-}
-?>
-
-<?php
-function create_table($filter)
+$conn = create_conn();
+function create_table($filter, $conn)
 {
-    $content = "";
-    $res = get_contestants($filter);
+    $body = "";
+    $res = get_contestants($filter, $conn);
+    $i = 1;
     foreach ($res as $k => $v) {
         $id = $v["id"];
         $name =  $v["name"];
@@ -58,65 +18,53 @@ function create_table($filter)
         $age = $v["age_range"];
         $gender = $v["gender"];
         $course = $v["course"];
-        $content = "$content
+        $time = $v["laptime"];
+        $body = "$body
         <tr>
+            <td>$i</td>
             <td>$id</td>
             <td>$name</td>
             <td>$surname</td>
             <td>$age</td>
             <td>$gender</td>
             <td>$course km</td>
-            <td><input type=\"number\"></td>
-            <td><input type=\"number\"></td>
+            <td>$time</td>
         </tr>
         ";
+        $i++;
     }
-    return $content;
-}
-?>
-
-<div class="site-content">
-    <form action="" method="post">
-        <label for="course"> Strecken: </label>
-        <select id="course" name="course">
-            <option value="empty">--</option>
-            <option value="10">10 km</option>
-            <option value="20">20 km</option>
-        </select>
-        <label for="age"> Altersgrupen: </label>
-        <select id="age" name="age">
-            <option value="empty">--</option>
-            <option value="<35">bis 35</option>
-            <option value="35-50">35-50</option>
-            <option value=">50">ab 50</option>
-        </select>
-        <label for="gender"> Geschlecht: </label>
-        <select id="gender" name="gender">
-            <option value="empty">--</option>
-            <option value="m">m</option>
-            <option value="f">f</option>
-        </select>
-        <input type="submit" value="Anwenden" name="filter">
-    </form>
-
-    <table>
+    $t = "
+        <table>
         <tr>
+            <th>Platz</th>
             <th>Startnummer</th>
             <th>Name</th>
             <th>Nachname</th>
             <th>Altersgruppe</th>
             <th>Geschlecht</th>
             <th>Strecke</th>
-            <th>Minuten</th>
-            <th>Sekunden</th>
-        </tr>
-        <thead></thead>
-        <tbody>
-            <?php
-            echo create_table($filter);
-            ?>
-        </tbody>
-    </table>
+            <th>Zeit</th>
+            </tr>
+            <thead></thead>
+            <tbody>
+                $body
+            </tbody>
+        </table>
+    ";
+    return $t;
+}
+?>
+
+<div class="site-content">
+    <?php include("templates/time_entry.php"); ?>
+    <h1>Gesamtzeit</h1>
+    <?php echo create_table(null, $conn) ?>
+    <h1>Bis 35</h1>
+    <?php echo create_table("age_range = '<35'", $conn) ?>
+    <h1>35-50</h1>
+    <?php echo create_table("age_range = '35-50'", $conn) ?>
+    <h1>Ab 50</h1>
+    <?php echo create_table("age_range = '>50'", $conn) ?>
 </div>
 
 <?php include("templates/footer.php"); ?>

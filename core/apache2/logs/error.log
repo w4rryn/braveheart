@@ -420,3 +420,9 @@
 [Thu Jan 20 10:17:35.012189 2022] [php:warn] [pid 1748:tid 1832] [client ::1:56614] PHP Warning:  foreach() argument must be of type array|object, bool given in C:\\Users\\uuhg3\\Desktop\\sae_projekt\\www\\auswerten.php on line 39, referer: http://localhost/auswerten.php
 [Thu Jan 20 10:22:19.183950 2022] [php:warn] [pid 1748:tid 1832] [client ::1:56645] PHP Warning:  foreach() argument must be of type array|object, bool given in C:\\Users\\uuhg3\\Desktop\\sae_projekt\\www\\auswerten.php on line 54, referer: http://localhost/auswerten.php
 [Thu Jan 20 10:23:00.888258 2022] [php:warn] [pid 1748:tid 1832] [client ::1:56653] PHP Warning:  foreach() argument must be of type array|object, bool given in C:\\Users\\uuhg3\\Desktop\\sae_projekt\\www\\auswerten.php on line 54, referer: http://localhost/auswerten.php
+[Fri Jan 21 12:02:55.345751 2022] [core:warn] [pid 2024:tid 588] AH00098: pid file C:/Users/uuhg3/Desktop/sae_projekt/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jan 21 12:02:55.556683 2022] [mpm_winnt:notice] [pid 2024:tid 588] AH00455: Apache/2.4.46 (Win32) PHP/8.0.3 configured -- resuming normal operations
+[Fri Jan 21 12:02:55.556683 2022] [mpm_winnt:notice] [pid 2024:tid 588] AH00456: Apache Lounge VC15 Server built: Feb 18 2021 09:53:33
+[Fri Jan 21 12:02:55.556683 2022] [core:notice] [pid 2024:tid 588] AH00094: Command line: 'C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2\\bin\\httpd_z.exe -d C:/Users/uuhg3/Desktop/sae_projekt/core/apache2 -f C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2\\conf\\httpd.conf -d C:\\Users\\uuhg3\\Desktop\\sae_projekt\\core\\apache2'
+[Fri Jan 21 12:02:55.560672 2022] [mpm_winnt:notice] [pid 2024:tid 588] AH00418: Parent: Created child process 19624
+[Fri Jan 21 12:02:56.454282 2022] [mpm_winnt:notice] [pid 19624:tid 696] AH00354: Child: Starting 150 worker threads.

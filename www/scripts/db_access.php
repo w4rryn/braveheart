@@ -42,15 +42,26 @@ function save_new_contestant($name, $surname, $age_range, $gender, $course)
     }
 }
 
-function get_contestants($filter)
+function get_contestants($filter, $conn)
 {
-    echo $filter;
     $sql = "SELECT * FROM contestants";
     if ($filter != null) {
         $sql = "$sql WHERE $filter";
     }
-    $sql = "$sql;";
-    $conn = create_conn();
+    $sql = "$sql ORDER BY laptime;";
     $res = mysqli_query($conn, $sql);
     return $res;
+}
+
+function set_time($id, $hour, $min, $sec, $conn)
+{
+    if ($id <= 0 || $min < 0 || $sec < 0 || $hour < 0 || $hour > 899 || $sec > 50 || $min > 59) {
+        return "Die Daten sind ungültig";
+    }
+    $conn = create_conn();
+    $sql = "UPDATE contestants SET laptime = '$hour:$min:$sec' WHERE id = '$id';";
+    $ok = mysqli_query($conn, $sql);
+    if (!$ok) {
+        return mysqli_error($conn);
+    }
 }
