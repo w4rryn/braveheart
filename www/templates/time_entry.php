@@ -23,6 +23,7 @@ if (!empty($_POST["time_entry"])) {
 ?>
 
 <form method="post">
+    <h1>Zeit eintragen</h1>
     <label for="contestant-id">Startnummer:</label>
     <input type="number" name="contestant" id="contestant-id">
     <br>

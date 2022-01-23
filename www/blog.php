@@ -3,7 +3,7 @@
 <?php
 require_once "scripts/db_access.php";
 if (array_key_exists("btn", $_POST)) {
-    add_blog_entry($_POST["txt"]);
+    add_blog_entry($_POST["txt"], $conn);
 }
 ?>
 
@@ -15,7 +15,7 @@ if (array_key_exists("btn", $_POST)) {
                 <th class="blogdate">Datum</th>
             </tr>
             <?php
-            $entries = get_blog_entries();
+            $entries = get_blog_entries($conn);
             foreach ($entries as $key => $value) {
                 $d = strtotime($value["created_at"]);
                 echo "<tr>";

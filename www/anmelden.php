@@ -1,10 +1,6 @@
 <?php include("templates/head.php"); ?>
 
 <?php
-require_once "scripts/db_access.php";
-?>
-
-<?php
 $name_err = $surname_err = $gender_err  = $course_err = "";
 $success = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -39,7 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!($name_err != "" || $surname_err != "" || $gender_err != "" || $course_err != "")) {
-        save_new_contestant($name, $surname, $age, $gender, $course);
+        require_once "scripts/db_access.php";
+        save_new_contestant($conn, $name, $surname, $age, $gender, $course);
         $success = "Anmeldung von $name $surname erfolgreich";
     }
 }

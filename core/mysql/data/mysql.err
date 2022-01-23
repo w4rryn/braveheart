@@ -174,3 +174,23 @@
 2022-01-21T11:02:56.579986Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
 2022-01-21T11:02:56.580795Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 2022-01-21T11:02:56.646195Z 0 [System] [MY-010931] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.0.23'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2022-01-23T11:05:40.271187Z 0 [System] [MY-010116] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe (mysqld 8.0.23) starting as process 13516
+2022-01-23T11:05:40.291803Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2022-01-23T11:05:40.373768Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2022-01-23T11:05:41.308724Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2022-01-23T11:05:41.629989Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2022-01-23T11:05:41.724540Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2022-01-23T11:05:41.729617Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2022-01-23T11:05:41.795896Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2022-01-23T11:05:41.796949Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2022-01-23T11:05:41.878615Z 0 [System] [MY-010931] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.0.23'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2022-01-23T11:05:56.453746Z 0 [System] [MY-010116] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe (mysqld 8.0.23) starting as process 15136
+2022-01-23T11:05:56.455410Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2022-01-23T11:05:56.479118Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2022-01-23T11:05:57.358824Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2022-01-23T11:05:57.789985Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2022-01-23T11:05:57.983310Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2022-01-23T11:05:57.990631Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2022-01-23T11:05:58.032012Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2022-01-23T11:05:58.033300Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2022-01-23T11:05:58.116994Z 0 [System] [MY-010931] [Server] C:\Users\uuhg3\Desktop\sae_projekt\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.0.23'  socket: ''  port: 3306  MySQL Community Server - GPL.
